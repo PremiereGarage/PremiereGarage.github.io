@@ -1,0 +1,242 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+main section:nth-child(1) {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  min-width: 100%;
+  min-height: 85vh;
+  background-color: black;
+  background: url(/img/Section-1.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 50%;
+  background-color: rgb(34, 34, 34);
+}
+
+main section:nth-child(1) div {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  width: 60%;
+  min-height: 50vh;
+}
+
+main section:nth-child(1) div h1,
+span {
+  font-family: "Six Caps", sans-serif;
+}
+
+main section:nth-child(1) div h1 {
+  color: white;
+  font-size: 4rem;
+  letter-spacing: 3px;
+}
+
+main section:nth-child(1) div span {
+  color: tomato;
+  font-size: 4rem;
+}
+
+main section:nth-child(1) div p {
+  font-family: "Oxygen", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: justify;
+  color: antiquewhite;
+}
+
+@media screen and (max-width: 768px) {
+  main section:nth-child(1) {
+    justify-content: center;
+    align-items: start;
+    background-position: bottom;
+  }
+
+  main section:nth-child(1) div {
+    padding: 20px 0;
+    width: 50%;
+    min-height: 40vh;
+  }
+
+  main section:nth-child(1) div h1 {
+    font-size: 1.5rem;
+  }
+
+  main section:nth-child(1) div span {
+    font-size: 1.5rem;
+  }
+
+  main section:nth-child(1) div p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main section:nth-child(1) {
+    background-size: 100%;
+  }
+  main section:nth-child(1) div {
+    width: 80%;
+    min-height: 35vh;
+  }
+  main section:nth-child(1) div h1 {
+    font-size: 1.2rem;
+  }
+
+  main section:nth-child(1) div span {
+    font-size: 1.2rem;
+  }
+
+  main section:nth-child(1) div p {
+    font-size: 0.8rem;
+    font-weight: 100;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  main section:nth-child(1) div h1 {
+    font-size: 1rem;
+  }
+
+  main section:nth-child(1) div span {
+    font-size: 1rem;
+  }
+
+  main section:nth-child(1) div p {
+    font-size: 0.6rem;
+  }
+}
+
+main section:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  height: 85vh;
+  min-width: 100%;
+  min-height: 85vh;
+  background-color: rgb(34, 34, 34);
+}
+
+main section:nth-child(2) h1 {
+  width: 100%;
+  font-family: "Acme", sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+main section:nth-child(2) div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  margin: 20px;
+  width: 500px;
+  height: 80%;
+  background-color: transparent;
+  border-bottom: 2px solid tomato;
+  /* transform: translate(25%); */
+}
+
+main section:nth-child(2) div p {
+  margin: 0 10px;
+  font-family: "Oxygen", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: justify;
+  color: antiquewhite;
+  mix-blend-mode: difference;
+}
+
+@media screen and (max-width: 1280px) {
+  main section:nth-child(2) div {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 800px) {
+  main section:nth-child(2) div {
+    width: 300px;
+    height: 50%;
+  }
+
+  main section:nth-child(2) div p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  main section:nth-child(2) {
+    padding: 30px 0;
+    height: 100vh;
+    min-height: 100vh;
+  }
+
+  main section:nth-child(2) div {
+    flex-grow: 1;
+    width: 300px;
+    height: 40%;
+  }
+
+  main section:nth-child(2) div p {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+}
+
+main section:nth-child(3) {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: rgb(34, 34, 34);
+}
+
+main section:nth-child(3) div {
+  width: 60%;
+  height: 55vh;
+  background-color: tomato;
+}
+
+main section:nth-child(3) div:nth-child(1) {
+  background: url(img/Section-1.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-right: 20px;
+  width: 30%;
+}
+
+main section:nth-child(3) div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 10px;
+  box-shadow: -3px 3px 5px 0 white;
+}
+
+main section:nth-child(3) div:nth-child(2) h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: white;
+  font-size: 3rem;
+}
+
+main section:nth-child(3) div:nth-child(2) p {
+  font-family: oxygen;
+  color: azure;
+  font-size: 1.2rem;
+}
