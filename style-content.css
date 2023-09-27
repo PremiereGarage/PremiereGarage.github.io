@@ -240,3 +240,22 @@ main section:nth-child(3) div:nth-child(2) p {
   color: azure;
   font-size: 1.2rem;
 }
+
+@media screen and (max-width: 1024px) {
+  main section:nth-child(3) div:nth-child(2) h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main section:nth-child(3) div:nth-child(1) {
+    width: 50%;
+  }
+  main section:nth-child(3) div:nth-child(2) h1 {
+    font-size: 1.5rem;
+  }
+
+  main section:nth-child(3) div:nth-child(2) p {
+    font-size: 0.9rem;
+  }
+}
