@@ -35,19 +35,18 @@ header div:nth-child(1) {
   justify-content: start;
 }
 
-header div:nth-child(1) h1,
-span {
-  font-family: 'Six Caps', sans-serif;
-}
-
 header div:nth-child(1) h1 {
+  font-family: Arial, serif;
   color: white;
   font-size: 4rem;
+  font-weight: 800;
 }
 
 header div:nth-child(1) span {
+  font-family: Arial, serif;
   color: tomato;
   font-size: 4rem;
+  font-weight: 800;
 }
 
 header div:nth-child(2) a button {
