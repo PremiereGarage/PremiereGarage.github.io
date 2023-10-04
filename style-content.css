@@ -116,22 +116,26 @@ main section:nth-child(1) div p {
 main section:nth-child(2) {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
-  height: 85vh;
-  min-width: 100%;
-  min-height: 85vh;
+  height: auto;
+  min-height: 500px;
   background-color: rgb(34, 34, 34);
+  padding: 50px 0;
+  position: relative;
 }
 
 main section:nth-child(2) h1 {
-  width: 100%;
+  width: 90%;
   font-family: "Acme", sans-serif;
   color: white;
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   letter-spacing: 2px;
+  margin-bottom: 30px;
+  background-color: tomato;
+  border-radius: 50px;
 }
 
 main section:nth-child(2) div {
@@ -140,15 +144,16 @@ main section:nth-child(2) div {
   justify-content: space-evenly;
   align-items: start;
   margin: 20px;
-  width: 500px;
-  height: 80%;
-  background-color: transparent;
-  border-bottom: 2px solid tomato;
-  /* transform: translate(25%); */
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
+  box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 10px;
 }
 
 main section:nth-child(2) div p {
-  margin: 0 10px;
+  margin: 0 0 15px;
   font-family: "Oxygen", sans-serif;
   font-size: 1rem;
   font-weight: 600;
@@ -159,30 +164,27 @@ main section:nth-child(2) div p {
 
 @media screen and (max-width: 1280px) {
   main section:nth-child(2) div {
-    width: 350px;
+    max-width: 600px;
   }
 }
+
 @media screen and (max-width: 800px) {
   main section:nth-child(2) div {
-    width: 300px;
-    height: 50%;
+    max-width: 500px;
   }
 
   main section:nth-child(2) div p {
     font-size: 0.9rem;
   }
 }
+
 @media screen and (max-width: 768px) {
   main section:nth-child(2) {
     padding: 30px 0;
-    height: 100vh;
-    min-height: 100vh;
   }
 
   main section:nth-child(2) div {
-    flex-grow: 1;
-    width: 300px;
-    height: 40%;
+    max-width: 450px;
   }
 
   main section:nth-child(2) div p {
@@ -204,44 +206,58 @@ main section:nth-child(3) {
 main section:nth-child(3) div {
   width: 60%;
   height: 55vh;
-  background-color: tomato;
+  background-color: #ff6347;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 main section:nth-child(3) div:nth-child(1) {
   background: url(img/Section-1.png);
-  background-position: left;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
   margin-right: 20px;
-  width: 30%;
+  width: 40%;
 }
 
 main section:nth-child(3) div:nth-child(2) {
+  flex-grow: 1;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
-  box-shadow: -3px 3px 5px 0 white;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 main section:nth-child(3) div:nth-child(2) h1 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: white;
-  font-size: 3rem;
+  font-family: "Cambria", Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 main section:nth-child(3) div:nth-child(2) p {
-  font-family: oxygen;
-  color: azure;
+  font-family: "Oxygen", sans-serif;
+  color: #555;
   font-size: 1.2rem;
+  text-align: center;
 }
 
 main section:nth-child(3) div:nth-child(2) h2 {
-  margin-top: 10px;
-  padding: 5px 15px;
-  background-color: white;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff6347;
   border-radius: 20px;
-  border-top-left-radius: 0px;
+  border-top-left-radius: 0;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 @media screen and (max-width: 1024px) {
@@ -251,21 +267,25 @@ main section:nth-child(3) div:nth-child(2) h2 {
 }
 
 @media screen and (max-width: 600px) {
+  main section:nth-child(3) div {
+    flex-direction: column;
+  }
   main section:nth-child(3) div:nth-child(1) {
-    width: 50%;
+    width: 100%;
+    margin-right: 0;
   }
   main section:nth-child(3) div:nth-child(2) h1 {
     font-size: 1.5rem;
   }
-
   main section:nth-child(3) div:nth-child(2) p {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    text-align: center;
   }
-
   main section:nth-child(3) div:nth-child(2) h2 {
     font-size: 1rem;
   }
 }
+
 main section:nth-child(4) {
   padding: 50px 0;
   display: flex;
@@ -279,44 +299,58 @@ main section:nth-child(4) {
 main section:nth-child(4) div {
   width: 60%;
   height: 55vh;
-  background-color: rgb(136, 21, 31);
+  background-color: #ff6347;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 main section:nth-child(4) div:nth-child(1) {
   background: url(img/Bobber.png);
-  background-position: left;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
-  margin-right: 20px;
-  width: 30%;
+  margin-left: 20px;
+  width: 40%;
 }
 
 main section:nth-child(4) div:nth-child(2) {
+  flex-grow: 1;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
-  box-shadow: 3px 3px 5px 0 white;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 main section:nth-child(4) div:nth-child(2) h1 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: white;
-  font-size: 3rem;
+  font-family: "Cambria", Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 main section:nth-child(4) div:nth-child(2) p {
-  font-family: oxygen;
-  color: azure;
+  font-family: "Oxygen", sans-serif;
+  color: #555;
   font-size: 1.2rem;
+  text-align: center;
 }
 
 main section:nth-child(4) div:nth-child(2) h2 {
-  margin-top: 10px;
-  padding: 5px 15px;
-  background-color: white;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff6347;
   border-radius: 20px;
-  border-top-right-radius: 0px;
+  border-top-right-radius: 0;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 @media screen and (max-width: 1024px) {
@@ -326,17 +360,20 @@ main section:nth-child(4) div:nth-child(2) h2 {
 }
 
 @media screen and (max-width: 600px) {
+  main section:nth-child(4) div {
+    flex-direction: column;
+  }
   main section:nth-child(4) div:nth-child(1) {
-    width: 50%;
+    width: 100%;
+    margin-right: 0;
   }
   main section:nth-child(4) div:nth-child(2) h1 {
     font-size: 1.5rem;
   }
-
   main section:nth-child(4) div:nth-child(2) p {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    text-align: center;
   }
-
   main section:nth-child(4) div:nth-child(2) h2 {
     font-size: 1rem;
   }
@@ -355,44 +392,58 @@ main section:nth-child(5) {
 main section:nth-child(5) div {
   width: 60%;
   height: 55vh;
-  background-color: tomato;
+  background-color: #ff6347;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 main section:nth-child(5) div:nth-child(1) {
   background: url(img/Chopper.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 80%;
+  background-size: 70%;
   margin-right: 20px;
-  width: 30%;
+  width: 40%;
 }
 
 main section:nth-child(5) div:nth-child(2) {
+  flex-grow: 1;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
-  box-shadow: -3px 3px 5px 0 white;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 main section:nth-child(5) div:nth-child(2) h1 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: white;
-  font-size: 3rem;
+  font-family: "Cambria", Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 main section:nth-child(5) div:nth-child(2) p {
-  font-family: oxygen;
-  color: azure;
+  font-family: "Oxygen", sans-serif;
+  color: #555;
   font-size: 1.2rem;
+  text-align: center;
 }
 
 main section:nth-child(5) div:nth-child(2) h2 {
-  margin-top: 10px;
-  padding: 5px 15px;
-  background-color: white;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff6347;
   border-radius: 20px;
-  border-top-left-radius: 0px;
+  border-top-right-radius: 0;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 @media screen and (max-width: 1024px) {
@@ -402,24 +453,27 @@ main section:nth-child(5) div:nth-child(2) h2 {
 }
 
 @media screen and (max-width: 600px) {
+  main section:nth-child(5) div {
+    flex-direction: column;
+  }
   main section:nth-child(5) div:nth-child(1) {
-    width: 50%;
+    width: 100%;
+    margin-right: 0;
   }
   main section:nth-child(5) div:nth-child(2) h1 {
     font-size: 1.5rem;
   }
-
   main section:nth-child(5) div:nth-child(2) p {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    text-align: center;
   }
-
   main section:nth-child(5) div:nth-child(2) h2 {
     font-size: 1rem;
   }
 }
 
-main section:nth-child(6){
-  padding: 30px 0;
+main section:nth-child(6) {
+  padding: 90px 0;
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -428,24 +482,28 @@ main section:nth-child(6){
   background-color: rgb(34, 34, 34);
 }
 
-main section:nth-child(6) div:nth-child(1){
-  padding: 20px 0;
+main section:nth-child(6) div:nth-child(1) {
   color: white;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-family: "Acme", "sans-serif";
+  background-color: tomato;
+  width: 90%;
+  text-align: center;
+  border-radius: 50px;
+  letter-spacing: 2px;
 }
 
-main section:nth-child(6) div:nth-child(2){
+main section:nth-child(6) div:nth-child(2) {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-around;
   align-items: center;
   flex: 1;
-  padding: 20px 0;
+  padding: 50px 0;
 }
 
-main section:nth-child(6) div:nth-child(2) h3{
+main section:nth-child(6) div:nth-child(2) h3 {
   text-align: center;
   margin: 20px 0;
   padding: 15px 25px;
@@ -456,7 +514,7 @@ main section:nth-child(6) div:nth-child(2) h3{
   border-radius: 50px;
 }
 
-main section:nth-child(6) div:nth-child(3){
+main section:nth-child(6) div:nth-child(3) {
   width: 100%;
   padding: 20px 0;
   display: flex;
@@ -464,10 +522,10 @@ main section:nth-child(6) div:nth-child(3){
   align-items: center;
 }
 
-main section:nth-child(6) div:nth-child(3) a{
+main section:nth-child(6) div:nth-child(3) a {
   cursor: pointer;
   padding: 10px 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 600;
   font-size: 2rem;
   width: 90%;
@@ -477,28 +535,113 @@ main section:nth-child(6) div:nth-child(3) a{
   transition: 0.3s ease;
 }
 
-main section:nth-child(6) div:nth-child(3) a:hover{
+main section:nth-child(6) div:nth-child(3) a:hover {
   background-color: whitesmoke;
 }
 
-@media screen and (max-width:600px) {
-  main section:nth-child(6) div:nth-child(2){
+@media screen and (max-width: 600px) {
+  main section:nth-child(6) div:nth-child(2) {
     flex-direction: column;
   }
 
-  main section:nth-child(6) div:nth-child(2) h3{
+  main section:nth-child(6) div:nth-child(2) h3 {
     border-radius: 0;
     width: 50%;
     text-align: center;
   }
 }
 
-@media screen and (max-width:400px){
-  main section:nth-child(6) div:nth-child(1){
+@media screen and (max-width: 400px) {
+  main section:nth-child(6) div:nth-child(1) {
     font-size: 1.5rem;
   }
 
-  main section:nth-child(6) div:nth-child(2) h3{
+  main section:nth-child(6) div:nth-child(2) h3 {
+    font-size: 1rem;
+  }
+}
+
+section:nth-child(7) {
+  background-color: rgb(34, 34, 34);
+  padding: 90px 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+section:nth-child(7) div:nth-child(1) {
+  color: white;
+  font-size: 3rem;
+  font-family: "Acme", "sans-serif";
+  background-color: tomato;
+  width: 90%;
+  text-align: center;
+  border-radius: 50px;
+  letter-spacing: 2px;
+}
+
+section:nth-child(7) div:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+  padding: 20px 0;
+}
+
+section:nth-child(7) div:nth-child(2) p {
+  text-align: center;
+  margin: 20px 30px;
+  padding: 15px 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  border-radius: 50px;
+  color: white;
+}
+
+section:nth-child(7) div:nth-child(2) {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:nth-child(7) div:nth-child(2) a {
+  cursor: pointer;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: white;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+section:nth-child(7) div:nth-child(2) a:hover {
+  color: tomato;
+}
+
+@media screen and (max-width: 600px) {
+  section:nth-child(7) div:nth-child(2) {
+    flex-direction: column;
+  }
+
+  section:nth-child(7) div:nth-child(2) h3 {
+    border-radius: 0;
+    width: 50%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  section:nth-child(7) div:nth-child(1) {
+    font-size: 1.5rem;
+  }
+
+  section:nth-child(7) div:nth-child(2) h3 {
     font-size: 1rem;
   }
 }
