@@ -193,6 +193,7 @@ main section:nth-child(2) div p {
   }
 }
 
+/* Style for Cafe Racer Section */
 main section:nth-child(3) {
   padding: 50px 0;
   display: flex;
@@ -200,7 +201,7 @@ main section:nth-child(3) {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background-color: rgb(34, 34, 34);
+  background-color: #333;
 }
 
 main section:nth-child(3) div {
@@ -208,19 +209,19 @@ main section:nth-child(3) div {
   height: 55vh;
   background-color: #ff6347;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 main section:nth-child(3) div:nth-child(1) {
-  background: url(img/Section-1.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  margin-right: 20px;
-  width: 40%;
+  margin-right: 30px;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 main section:nth-child(3) div:nth-child(2) {
@@ -229,50 +230,99 @@ main section:nth-child(3) div:nth-child(2) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  background: url(/img/Section-1.png);
+  background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background-size: 90%;
+  background-position: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 10px 0px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
-main section:nth-child(3) div:nth-child(2) h1 {
+main section:nth-child(3) div:nth-child(1) h1 {
   font-family: "Cambria", Cochin, Georgia, Times, "Times New Roman", serif;
-  color: #333;
+  color: white;
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-main section:nth-child(3) div:nth-child(2) p {
+main section:nth-child(3) div:nth-child(1) p {
   font-family: "Oxygen", sans-serif;
-  color: #555;
+  margin: 8px;
+  text-align: justify;
+}
+
+main section:nth-child(3) div:nth-child(3) p {
+  font-family: "Oxygen", sans-serif;
+  color: black;
   font-size: 1.2rem;
+  font-weight: 800;
   text-align: center;
 }
 
-main section:nth-child(3) div:nth-child(2) h2 {
+main section:nth-child(3) div:nth-child(3) h2 {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #ff6347;
-  border-radius: 20px;
-  border-top-left-radius: 0;
   color: white;
   font-size: 1.2rem;
   text-align: center;
 }
 
+main section:nth-child(3) div:nth-child(3) ul {
+  list-style-type:disc;
+  margin-left: 20px;
+  padding: 0;
+}
+
+main section:nth-child(3) div:nth-child(3) ul li {
+  font-family: "Oxygen", sans-serif;
+  color: black;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+main section:nth-child(3) div:nth-child(3) a button {
+  padding: 10px;
+  margin: 10px 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 1.2rem;
+}
+
+/* Media Queries */
 @media screen and (max-width: 1024px) {
+  main section:nth-child(3) {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  main section:nth-child(3) div {
+    padding: 0;
+  }
+  main section:nth-child(3) div:nth-child(1) {
+    width: 100%;
+    margin: 0;
+    height: 30vh;
+  }
+  main section:nth-child(3) div:nth-child(2) {
+    height: 70vh;
+  }
   main section:nth-child(3) div:nth-child(2) h1 {
     font-size: 2rem;
+  }
+
+  main section:nth-child(3) div:nth-child(3) {
+    height: 50%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  main section:nth-child(3) div {
-    flex-direction: column;
-  }
-  main section:nth-child(3) div:nth-child(1) {
-    width: 100%;
-    margin-right: 0;
+  main section:nth-child(3) div:nth-child(2){
+    background-size: 100%;
+    height: 60vh;
+    box-shadow: none;
   }
   main section:nth-child(3) div:nth-child(2) h1 {
     font-size: 1.5rem;
@@ -283,6 +333,10 @@ main section:nth-child(3) div:nth-child(2) h2 {
   }
   main section:nth-child(3) div:nth-child(2) h2 {
     font-size: 1rem;
+  }
+
+  main section:nth-child(3) div:nth-child(3){
+    padding: 20px;
   }
 }
 
@@ -301,19 +355,19 @@ main section:nth-child(4) div {
   height: 55vh;
   background-color: #ff6347;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  padding: 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  box-shadow: 0px -4px -6px rgba(0, 0, 0, 0.5);
 }
 
 main section:nth-child(4) div:nth-child(1) {
-  background: url(img/Bobber.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  margin-left: 20px;
-  width: 40%;
+  margin-left: 30px;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 main section:nth-child(4) div:nth-child(2) {
@@ -322,50 +376,99 @@ main section:nth-child(4) div:nth-child(2) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  background: url(/img/Bobber.png);
+  background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background-size: 90%;
+  background-position: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: -10px 0px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
-main section:nth-child(4) div:nth-child(2) h1 {
+main section:nth-child(4) div:nth-child(1) h1 {
   font-family: "Cambria", Cochin, Georgia, Times, "Times New Roman", serif;
-  color: #333;
+  color: white;
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-main section:nth-child(4) div:nth-child(2) p {
+main section:nth-child(4) div:nth-child(1) p {
   font-family: "Oxygen", sans-serif;
-  color: #555;
+  margin: 8px;
+  text-align: justify;
+}
+
+main section:nth-child(4) div:nth-child(3) p {
+  font-family: "Oxygen", sans-serif;
+  color: black;
   font-size: 1.2rem;
+  font-weight: 800;
   text-align: center;
 }
 
-main section:nth-child(4) div:nth-child(2) h2 {
+main section:nth-child(4) div:nth-child(3) h2 {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #ff6347;
-  border-radius: 20px;
-  border-top-right-radius: 0;
   color: white;
   font-size: 1.2rem;
   text-align: center;
 }
 
+main section:nth-child(4) div:nth-child(3) ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding: 0;
+}
+
+main section:nth-child(4) div:nth-child(3) ul li {
+  font-family: "Oxygen", sans-serif;
+  color: black;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+main section:nth-child(4) div:nth-child(3) a button {
+  padding: 10px;
+  margin: 10px 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 1.2rem;
+}
+
+/* Media Queries */
 @media screen and (max-width: 1024px) {
+  main section:nth-child(4) {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  main section:nth-child(4) div {
+    padding: 0;
+  }
+  main section:nth-child(4) div:nth-child(1) {
+    width: 100%;
+    margin: 0;
+    height: 30vh;
+  }
+  main section:nth-child(4) div:nth-child(2) {
+    height: 70vh;
+  }
   main section:nth-child(4) div:nth-child(2) h1 {
     font-size: 2rem;
+  }
+
+  main section:nth-child(4) div:nth-child(3) {
+    height: 50%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  main section:nth-child(4) div {
-    flex-direction: column;
-  }
-  main section:nth-child(4) div:nth-child(1) {
-    width: 100%;
-    margin-right: 0;
+  main section:nth-child(4) div:nth-child(2){
+    background-size: 100%;
+    height: 60vh;
+    box-shadow: none;
   }
   main section:nth-child(4) div:nth-child(2) h1 {
     font-size: 1.5rem;
@@ -377,6 +480,10 @@ main section:nth-child(4) div:nth-child(2) h2 {
   main section:nth-child(4) div:nth-child(2) h2 {
     font-size: 1rem;
   }
+
+  main section:nth-child(4) div:nth-child(3){
+    padding: 20px;
+  }
 }
 
 main section:nth-child(5) {
@@ -386,7 +493,7 @@ main section:nth-child(5) {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background-color: rgb(34, 34, 34);
+  background-color: #333;
 }
 
 main section:nth-child(5) div {
@@ -394,19 +501,19 @@ main section:nth-child(5) div {
   height: 55vh;
   background-color: #ff6347;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 main section:nth-child(5) div:nth-child(1) {
-  background: url(img/Chopper.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 70%;
-  margin-right: 20px;
-  width: 40%;
+  margin-right: 30px;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 main section:nth-child(5) div:nth-child(2) {
@@ -415,50 +522,99 @@ main section:nth-child(5) div:nth-child(2) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  background: url(/img/Bobber.png);
+  background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background-size: 90%;
+  background-position: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 10px 0px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
-main section:nth-child(5) div:nth-child(2) h1 {
+main section:nth-child(5) div:nth-child(1) h1 {
   font-family: "Cambria", Cochin, Georgia, Times, "Times New Roman", serif;
-  color: #333;
+  color: white;
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-main section:nth-child(5) div:nth-child(2) p {
+main section:nth-child(5) div:nth-child(1) p {
   font-family: "Oxygen", sans-serif;
-  color: #555;
+  margin: 8px;
+  text-align: justify;
+}
+
+main section:nth-child(5) div:nth-child(3) p {
+  font-family: "Oxygen", sans-serif;
+  color: black;
   font-size: 1.2rem;
+  font-weight: 800;
   text-align: center;
 }
 
-main section:nth-child(5) div:nth-child(2) h2 {
+main section:nth-child(5) div:nth-child(3) h2 {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #ff6347;
-  border-radius: 20px;
-  border-top-right-radius: 0;
   color: white;
   font-size: 1.2rem;
   text-align: center;
 }
 
+main section:nth-child(5) div:nth-child(3) ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding: 0;
+}
+
+main section:nth-child(5) div:nth-child(3) ul li {
+  font-family: "Oxygen", sans-serif;
+  color: black;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+main section:nth-child(5) div:nth-child(3) a button {
+  padding: 10px;
+  margin: 10px 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 1.2rem;
+}
+
+/* Media Queries */
 @media screen and (max-width: 1024px) {
+  main section:nth-child(5) {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  main section:nth-child(5) div {
+    padding: 0;
+  }
+  main section:nth-child(5) div:nth-child(1) {
+    width: 100%;
+    margin: 0;
+    height: 30vh;
+  }
+  main section:nth-child(5) div:nth-child(2) {
+    height: 70vh;
+  }
   main section:nth-child(5) div:nth-child(2) h1 {
     font-size: 2rem;
+  }
+
+  main section:nth-child(5) div:nth-child(3) {
+    height: 50%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  main section:nth-child(5) div {
-    flex-direction: column;
-  }
-  main section:nth-child(5) div:nth-child(1) {
-    width: 100%;
-    margin-right: 0;
+  main section:nth-child(5) div:nth-child(2){
+    background-size: 100%;
+    height: 60vh;
+    box-shadow: none;
   }
   main section:nth-child(5) div:nth-child(2) h1 {
     font-size: 1.5rem;
@@ -469,6 +625,10 @@ main section:nth-child(5) div:nth-child(2) h2 {
   }
   main section:nth-child(5) div:nth-child(2) h2 {
     font-size: 1rem;
+  }
+
+  main section:nth-child(5) div:nth-child(3){
+    padding: 20px;
   }
 }
 
@@ -552,9 +712,6 @@ main section:nth-child(6) div:nth-child(3) a:hover {
 }
 
 @media screen and (max-width: 400px) {
-  main section:nth-child(6) div:nth-child(1) {
-    font-size: 1.5rem;
-  }
 
   main section:nth-child(6) div:nth-child(2) h3 {
     font-size: 1rem;
@@ -595,7 +752,6 @@ section:nth-child(7) div:nth-child(2) {
 section:nth-child(7) div:nth-child(2) p {
   text-align: center;
   margin: 20px 30px;
-  padding: 15px 25px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.8rem;
   border-radius: 50px;
@@ -629,19 +785,21 @@ section:nth-child(7) div:nth-child(2) a:hover {
     flex-direction: column;
   }
 
-  section:nth-child(7) div:nth-child(2) h3 {
+  section:nth-child(7) div:nth-child(2) p {
     border-radius: 0;
-    width: 50%;
+    width: 80%;
     text-align: center;
+    font-size: 1.2rem;
+  }
+
+  section:nth-child(7) div:nth-child(2) a{
+    font-size: 1.2rem;
   }
 }
 
 @media screen and (max-width: 400px) {
-  section:nth-child(7) div:nth-child(1) {
-    font-size: 1.5rem;
-  }
 
-  section:nth-child(7) div:nth-child(2) h3 {
+  section:nth-child(7) div:nth-child(2) p {
     font-size: 1rem;
   }
 }
