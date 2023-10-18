@@ -523,10 +523,10 @@ main section:nth-child(5) div:nth-child(2) {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background: url(/img/Bobber.png);
+  background: url(/img/Chopper.png);
   background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.9);
-  background-size: 90%;
+  background-size: 60%;
   background-position: center;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -612,7 +612,6 @@ main section:nth-child(5) div:nth-child(3) a button {
 
 @media screen and (max-width: 600px) {
   main section:nth-child(5) div:nth-child(2){
-    background-size: 100%;
     height: 60vh;
     box-shadow: none;
   }
