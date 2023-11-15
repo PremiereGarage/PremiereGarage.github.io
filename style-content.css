@@ -717,7 +717,45 @@ main section:nth-child(6) div:nth-child(3) a:hover {
   }
 }
 
-section:nth-child(7) {
+
+
+main section:nth-child(7) {
+  background-color: rgb(34, 34, 34);
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+main section:nth-child(7) div{
+  width: 40%;
+  height: 30vh;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+}
+
+main section:nth-child(7) div:nth-child(1) div:nth-child(1){
+  width: 30%;
+  background: url(/img/JN.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main section:nth-child(7) div:nth-child(1) div:nth-child(2){
+  width: 65%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  text-align: justify;
+}
+
+section:nth-child(8) {
   background-color: rgb(34, 34, 34);
   padding: 90px 0;
   display: flex;
@@ -727,7 +765,7 @@ section:nth-child(7) {
   flex-direction: column;
 }
 
-section:nth-child(7) div:nth-child(1) {
+section:nth-child(8) div:nth-child(1) {
   color: white;
   font-size: 3rem;
   font-family: "Acme", "sans-serif";
@@ -738,7 +776,7 @@ section:nth-child(7) div:nth-child(1) {
   letter-spacing: 2px;
 }
 
-section:nth-child(7) div:nth-child(2) {
+section:nth-child(8) div:nth-child(2) {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -748,7 +786,7 @@ section:nth-child(7) div:nth-child(2) {
   padding: 20px 0;
 }
 
-section:nth-child(7) div:nth-child(2) p {
+section:nth-child(8) div:nth-child(2) p {
   text-align: center;
   margin: 20px 30px;
   font-family: Arial, Helvetica, sans-serif;
@@ -757,7 +795,7 @@ section:nth-child(7) div:nth-child(2) p {
   color: white;
 }
 
-section:nth-child(7) div:nth-child(2) {
+section:nth-child(8) div:nth-child(2) {
   width: 100%;
   padding: 20px 0;
   display: flex;
@@ -765,7 +803,7 @@ section:nth-child(7) div:nth-child(2) {
   align-items: center;
 }
 
-section:nth-child(7) div:nth-child(2) a {
+section:nth-child(8) div:nth-child(2) a {
   cursor: pointer;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 600;
@@ -775,30 +813,30 @@ section:nth-child(7) div:nth-child(2) a {
   transition: 0.3s ease;
 }
 
-section:nth-child(7) div:nth-child(2) a:hover {
+section:nth-child(8) div:nth-child(2) a:hover {
   color: tomato;
 }
 
 @media screen and (max-width: 600px) {
-  section:nth-child(7) div:nth-child(2) {
+  section:nth-child(8) div:nth-child(2) {
     flex-direction: column;
   }
 
-  section:nth-child(7) div:nth-child(2) p {
+  section:nth-child(8) div:nth-child(2) p {
     border-radius: 0;
     width: 80%;
     text-align: center;
     font-size: 1.2rem;
   }
 
-  section:nth-child(7) div:nth-child(2) a{
+  section:nth-child(8) div:nth-child(2) a{
     font-size: 1.2rem;
   }
 }
 
 @media screen and (max-width: 400px) {
 
-  section:nth-child(7) div:nth-child(2) p {
+  section:nth-child(8) div:nth-child(2) p {
     font-size: 1rem;
   }
 }

@@ -1,3 +1,66 @@
+/* CSS untuk tombol dan formulir pemesanan */
+.pesan-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 30px;
+  padding: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.form-pemesanan {
+  display: none;
+  position: fixed;
+  bottom: 100;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 80%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 50px 10px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Styling untuk formulir input */
+.form-pemesanan form label {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.form-pemesanan form input,
+.form-pemesanan form select,
+.form-pemesanan form textarea,
+.form-pemesanan form button {
+  height: 30px;
+  margin: 10px 0;
+  padding: 5px;
+  width: 100%;
+  border-bottom: 1.5px solid black;
+}
+
+.form-pemesanan form button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  background-color: green;
+  color: white;
+}
+
 :root {
   --main-color: rgb(121, 121, 121);
 }

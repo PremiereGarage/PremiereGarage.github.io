@@ -51,17 +51,51 @@
     <link rel="stylesheet" href="style-content.css" />
     <link rel="stylesheet" href="style-footer.css" />
 
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" /> -->
+
     <title>Premiere Garage | Custom Motor - Malang</title>
   </head>
 
   <body>
+    <!-- Tombol Pesan -->
+    <div id="pesanBtn" class="pesan-btn">
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+
+    <!-- Formulir Pemesanan -->
+    <div id="formPemesanan" class="form-pemesanan">
+      <span class="close-btn" onclick="closeForm()">&times;</span>
+      <form id="orderForm">
+        <label for="nama">Nama Pemesan:</label>
+        <input type="text" id="nama" name="nama" required />
+
+        <label for="produk">Produk yang Dipesan:</label>
+        <select id="produk" name="produk" required>
+          <option value="Cafe Racer">Cafe Racer</option>
+          <option value="Bobber">Bobber</option>
+          <option value="Chopper">Chopper</option>
+        </select>
+
+        <label for="noTelepon">No Telepon:</label>
+        <input type="tel" id="noTelepon" name="noTelepon" required />
+
+        <label for="alamat">Alamat:</label>
+        <textarea id="alamat" name="alamat" required></textarea>
+
+        <label for="metodePembayaran">Metode Pembayaran:</label>
+        <input type="text" id="metodePembayaran" name="metodePembayaran" placeholder="Bayar ditempat" required />
+
+        <button type="button" onclick="generateStruk()">Pesan Sekarang</button>
+      </form>
+    </div>
+
     <!-- HEADER -->
     <header>
       <div>
         <h1>P<span>G</span></h1>
       </div>
       <div>
-        <a href="https://api.whatsapp.com/send/?phone=%2B6285881582774&text&type=phone_number&app_absent=0" target="_blank"><button>HUBUNGI KAMI</button></a>
+        <a href="https://api.whatsapp.com/send/?phone=%2B6285163207556&text&type=phone_number&app_absent=0" target="_blank"><button>HUBUNGI KAMI</button></a>
       </div>
     </header>
     <!-- HEADER END -->
@@ -114,7 +148,7 @@
           </ul>
           <h2>Harga</h2>
           <p>Rp 18.900.000</p>
-          <a href="https://api.whatsapp.com/send/?phone=%2B6285881582774&text&type=phone_number&app_absent=0" target="_blank">
+          <a href="https://api.whatsapp.com/send/?phone=%2B6285163207556&text&type=phone_number&app_absent=0" target="_blank">
             <button>Pesan Sekarang</button>
           </a>
         </div>
@@ -186,6 +220,26 @@
       <!-- SECTION 6 END -->
 
       <!-- SECTION 7 -->
+      <!-- <section>
+        <div>
+          <div></div>
+          <div>
+            <h2>Jefri Nichol</h2>
+            <p>Semua motor yang disediakan disini sangat unik juga kekinian, dari proses perakitan, pemasangan dan juga detailing motor yang sangat rapih dan presisi membuat saya jadi lebih cinta dengan motor custom.</p>
+          </div>
+        </div>
+
+        <div>
+          <div></div>
+          <div>
+            <h2>Jekson Karmela</h2>
+            <p>Saya sangat suka dengan tampilan/look bobber yang disediakan oleh premiere garage, disini menyediakan berbagai motor bobber yang menarik, tidak hanya itu bahkan pelayanan disini sangat memuaskan.</p>
+          </div>
+        </div>
+      </section> -->
+      <!-- SECTION 7 -->
+
+      <!-- SECTION 8 -->
       <section>
         <div>KONTAK KAMI</div>
         <div>
@@ -194,7 +248,7 @@
           <p><i class="fas fa-map-marker-alt"></i>Jl. Cakrawala No.5, Sumbersari, Kec. Lowokwaru, Kota Malang, Jawa Timur 65145</p>
         </div>
       </section>
-      <!-- SECTION 7 END -->
+      <!-- SECTION 8 END -->
     </main>
     <!-- MAIN END -->
 
@@ -203,5 +257,41 @@
       <p>Hak Cipta © 2023 - Premier Garage by Phoenix</p>
     </footer>
     <!-- FOOTER END -->
+
+    <script>
+      // JavaScript untuk tombol dan formulir pemesanan
+      document.getElementById("pesanBtn").addEventListener("click", function () {
+        document.getElementById("formPemesanan").style.display = "block";
+      });
+
+      function closeForm() {
+        document.getElementById("formPemesanan").style.display = "none";
+      }
+
+      function generateStruk() {
+        // Ambil data dari formulir
+        var nama = document.getElementById("nama").value;
+        var produk = document.getElementById("produk").value;
+        var noTelepon = document.getElementById("noTelepon").value;
+        var alamat = document.getElementById("alamat").value;
+        var metodePembayaran = document.getElementById("metodePembayaran").value;
+
+        // Buat struk pemesanan
+        var struk = `
+    Struk Pemesanan
+    Nama Pemesan : ${nama}
+    Produk yang Dipesan : ${produk}
+    No Telepon : ${noTelepon}
+    Alamat : ${alamat}
+    Metode Pembayaran : ${metodePembayaran}
+  `;
+
+        // Tampilkan struk
+        alert(struk);
+
+        // Tutup formulir setelah pesan
+        closeForm();
+      }
+    </script>
   </body>
 </html>
