@@ -261,11 +261,11 @@
     <script>
       // JavaScript untuk tombol dan formulir pemesanan
       document.getElementById("pesanBtn").addEventListener("click", function () {
-        document.getElementById("formPemesanan").style.display = "block";
+        document.getElementById("formPemesanan").style.opacity = "100";
       });
 
       function closeForm() {
-        document.getElementById("formPemesanan").style.display = "none";
+        document.getElementById("formPemesanan").style.opacity = "0";
       }
 
       function generateStruk() {
@@ -283,7 +283,7 @@
     Produk yang Dipesan : ${produk}
     No Telepon : ${noTelepon}
     Alamat : ${alamat}
-    Metode Pembayaran : ${metodePembayaran}
+    Metode Pembayaran : Bayar ditempat
   `;
 
         // Tampilkan struk
