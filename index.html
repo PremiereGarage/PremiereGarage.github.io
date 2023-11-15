@@ -80,7 +80,7 @@
         <input type="tel" id="noTelepon" name="noTelepon" required />
 
         <label for="alamat">Alamat:</label>
-        <textarea id="alamat" name="alamat" required></textarea>
+        <input type="text" id="alamat" name="alamat" required></input>
 
         <label for="metodePembayaran">Metode Pembayaran:</label>
         <input type="text" id="metodePembayaran" name="metodePembayaran" placeholder="Bayar ditempat" required />
@@ -220,8 +220,8 @@
       <!-- SECTION 6 END -->
 
       <!-- SECTION 7 -->
-       <section>
-      <!--  <div>
+      <section>
+        <!--  <div>
           <div></div>
           <div>
             <h2>Jefri Nichol</h2>
@@ -236,7 +236,7 @@
             <p>Saya sangat suka dengan tampilan/look bobber yang disediakan oleh premiere garage, disini menyediakan berbagai motor bobber yang menarik, tidak hanya itu bahkan pelayanan disini sangat memuaskan.</p>
           </div>
         </div>-->
-      </section> 
+      </section>
       <!-- SECTION 7 -->
 
       <!-- SECTION 8 -->
@@ -261,33 +261,37 @@
     <script>
       // JavaScript untuk tombol dan formulir pemesanan
       document.getElementById("pesanBtn").addEventListener("click", function () {
-        document.getElementById("formPemesanan").style.opacity = "100";
+        document.getElementById("formPemesanan").style.display = "flex";
       });
 
       function closeForm() {
-        document.getElementById("formPemesanan").style.opacity = "0";
+        document.getElementById("formPemesanan").style.display = "none";
       }
 
       function generateStruk() {
         // Ambil data dari formulir
         var nama = document.getElementById("nama").value;
-        var produk = document.getElementById("produk").value;
         var noTelepon = document.getElementById("noTelepon").value;
+        var produk = document.getElementById("produk").value;
         var alamat = document.getElementById("alamat").value;
-        var metodePembayaran = document.getElementById("metodePembayaran").value;
 
-        // Buat struk pemesanan
         var struk = `
-    Struk Pemesanan
-    Nama Pemesan : ${nama}
+           Struk Pemesanan
+    ================================
+    Nama Pemesan        : ${nama}
+    No Telepon          : ${noTelepon}
     Produk yang Dipesan : ${produk}
-    No Telepon : ${noTelepon}
-    Alamat : ${alamat}
-    Metode Pembayaran : Bayar ditempat
-  `;
+    Alamat              : ${alamat}
+    Metode Pembayaran   : Bayar ditempat
+    ================================
+    `;
 
         // Tampilkan struk
         alert(struk);
+
+        // Membuka jendela obrolan WhatsApp dengan pesan yang telah dibuat
+        var waLink = `https://api.whatsapp.com/send/?phone=${encodeURIComponent("+6285163207556")}&text=${encodeURIComponent(struk)}`;
+        window.open(waLink);
 
         // Tutup formulir setelah pesan
         closeForm();
